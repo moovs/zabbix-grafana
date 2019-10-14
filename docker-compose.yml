@@ -1,0 +1,91 @@
+version: '3'
+
+services:
+  zabbix-db:
+    image: mysql:5.7
+    container_name: zabbix_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "secret"
+      MYSQL_DATABASE: "zabbix"
+      MYSQL_USER: "zabbix"
+      MYSQL_PASSWORD: "zabbix"
+    volumes:
+      - ./db:/var/lib/mysql
+      - /etc/localtime:/etc/localtime:ro
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci 
+    restart: always
+    networks:
+      app_net:
+        aliases:
+          - zabbix-db
+
+  zabbix-server:
+    build:
+      context: ./docker/zabbix_server
+      dockerfile: Dockerfile
+    container_name: zabbix_server
+    environment:
+      DB_SERVER_HOST: "zabbix-db"
+      MYSQL_DATABASE: "zabbix"
+      MYSQL_USER: "zabbix"
+      MYSQL_PASSWORD: "zabbix"
+      ZBX_CACHESIZE: "128M"
+      ZBX_VALUECACHESIZE: "128M"
+    volumes:
+      - ./xtrafiles:/srv/xtrafiles
+      - ./alertscripts:/usr/lib/zabbix/alertscripts
+      - /etc/localtime:/etc/localtime:ro
+    depends_on:
+      - zabbix-db
+    ports:
+      - '10051:10051'
+    restart: always
+    networks:
+      app_net:
+        ipv4_address: 172.16.238.10
+
+  zabbix-web:
+    image: zabbix/zabbix-web-nginx-mysql:latest
+    container_name: zabbix_web
+    environment:
+      DB_SERVER_HOST: "zabbix-db"
+      MYSQL_DATABASE: "zabbix"
+      MYSQL_USER: "zabbix"
+      MYSQL_PASSWORD: "zabbix"
+      ZBX_SERVER_HOST: "zabbix-server"
+      TZ: "Europe/Kiev"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - '80:80'
+      - '443:443'
+    restart: always
+    networks:
+      app_net:
+        aliases:
+          - zabbix-web
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    volumes:
+      - grafana:/var/lib/grafana
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    networks:
+      app_net:
+        aliases:
+          - grafana
+
+volumes:
+  grafana: {}
+
+networks:
+  app_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.238.0/24
+
