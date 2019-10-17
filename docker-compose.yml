@@ -32,7 +32,6 @@ services:
       ZBX_CACHESIZE: "128M"
       ZBX_VALUECACHESIZE: "128M"
     volumes:
-      - ./xtrafiles:/srv/xtrafiles
       - ./alertscripts:/usr/lib/zabbix/alertscripts
       - /etc/localtime:/etc/localtime:ro
     depends_on:
@@ -66,7 +65,9 @@ services:
           - zabbix-web
 
   grafana:
-    image: grafana/grafana:latest
+    build:
+      context: ./docker/grafana
+      dockerfile: Dockerfile
     container_name: grafana
     volumes:
       - grafana:/var/lib/grafana
