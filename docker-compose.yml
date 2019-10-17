@@ -44,7 +44,7 @@ services:
         ipv4_address: 172.16.238.10
 
   zabbix-web:
-    image: zabbix/zabbix-web-nginx-mysql:latest
+    image: zabbix/zabbix-web-nginx-mysql:ubuntu-4.0-latest
     container_name: zabbix_web
     environment:
       DB_SERVER_HOST: "zabbix-db"
