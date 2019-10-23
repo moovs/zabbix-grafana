@@ -3,23 +3,11 @@
 </p>
 
 ***
-
-<<<<<<< HEAD
-1.  `git  pull`
-2. `docker-compose up-d`
-2.2 `move telegram script to alertscripts directory`
-3. `install zabbix-agent on zabbix-server host`
-3.1 `change ip on zabbix-server in your zabbix-agent conf to zabbix-server ip`
-4. `install zabbix-agent on another host`
-5. `change ip your host in zabbix-agent conf `
-6. ``
-=======
 <p align="center">
   <b>Deploy Zabbix 4.0 with Grafana dashboards in Docker-compose</b>
 </p>
 
 ***
-
 This guide is about how to deploy a Zabbix monitoring system with Grafana to display graphs.
 <br>
 You will need to follow the steps described below if you are not familiar with how this system works:
@@ -44,4 +32,3 @@ for this, you need type ip address your server, on which you installed Zabbix, i
 ```
 
 ```
->>>>>>> d8f216f70220752ab9ac1c26f2d9cc7931157fc8
