@@ -29,4 +29,8 @@ docker-compose up -d --build
 ```
 mv telegram alertscripts/
 ```
-> 
+> login to Zabbix web interface<br>
+for this, you need type ip address your server, on which you installed Zabbix, in address bar your browser
+```
+
+```
