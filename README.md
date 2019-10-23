@@ -40,4 +40,4 @@ chmod +x telegram
 > login to Zabbix web interface:
 <img width="250" height="40" src="https://github.com/moovs/zabbix-grafana/blob/master/src/your_host.png">
 
->> for this, you need type ip address your server, on which you installed Zabbix, in address bar your browse
+>> for this, you need type ip address your server, on which you installed Zabbix, in address bar your browse, then type default login 'admin' and password 'zabbix'
