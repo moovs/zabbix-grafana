@@ -23,12 +23,21 @@ cd /path/to/zabbix-grafana
 ```
 docker-compose up -d --build
 ```
-> move telegram script to alertscripts
+> move telegram script to alertscripts:
 ```
 mv telegram alertscripts/
 ```
-> login to Zabbix web interface<br>
-for this, you need type ip address your server, on which you installed Zabbix, in address bar your browser
+> set right permission to telegram script and make it executable:
 ```
+cd alertscripts/
+```
+```
+chown -R zabbix telegram
+```
+```
+chmod +x telegram
+```
+> login to Zabbix web interface:
+<img width="250" height="40" src="https://github.com/moovs/zabbix-grafana/blob/master/src/your_host.png">
 
-```
+>> for this, you need type ip address your server, on which you installed Zabbix, in address bar your browse
