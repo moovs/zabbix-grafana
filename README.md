@@ -16,10 +16,17 @@ You will need to follow the steps described below if you are not familiar with h
 
 > clone this repo to your host:
 ```
-# git clone https://github.com/moovs/zabbix-grafana.git
+git clone https://github.com/moovs/zabbix-grafana.git
 ```
 > build and start docker-compose file:
 ```
-# docker-compose up -d --build
+cd /path/to/zabbix-grafana
+```
+```
+docker-compose up -d --build
+```
+> move telegram script to alertscripts
+```
+mv telegram alertscripts/
 ```
 > 
