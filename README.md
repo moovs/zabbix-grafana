@@ -37,6 +37,8 @@ chown -R zabbix telegram
 ```
 chmod +x telegram
 ```
+>> we will set up a notification in Telegram a little bit later, right now, we will simply prepare the ground for this so that we would not return to this later.
+
 > login to Zabbix web interface:
 <img width="250" height="40" src="https://github.com/moovs/zabbix-grafana/blob/master/src/your_host.png">
 
