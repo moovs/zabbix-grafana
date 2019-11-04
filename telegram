@@ -19,6 +19,6 @@ tb.send_message(DESTINATION,SUBJECT + '\n' + MESSAGE)
 
 ##########################################################
 
-# don't forget set permission to file:
+# don't forget set permission to file and make it executable:
     # 1. chown -R zabbix telegram
     # 1. chmod +x telegram
