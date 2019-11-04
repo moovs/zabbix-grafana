@@ -12,7 +12,7 @@ This guide is about how to deploy a Zabbix monitoring system with Grafana to dis
 <br>
 The whole installation will be divided into 3 parts. The first step is setting up Zabbix, the second step is connecting Zabbix to Grafana, and the third step is creating Telegram bot and connect to Zabbix for notifications.
 <br>
-## Prerequsition:
+## Prerequisites:
 - clone this repo to your host:
 ```
 git clone https://github.com/moovs/zabbix-grafana.git
@@ -38,9 +38,7 @@ chown -R zabbix telegram
 ```
 chmod +x telegram
 ```
->> we will set up a notification in Telegram a little bit later, right now, we will simply prepare the ground for this so that we would not return to this later.
+## Step 1: Zabbix setup
+- login to Zabbix web interface with default 80 port:
 
-- login to Zabbix web interface:
-<img width="250" height="40" src="https://github.com/moovs/zabbix-grafana/blob/master/src/your_host.png">
-
->> for this, you need type ip address your server, on which you installed Zabbix, in address bar your browse, then type default login 'admin' and password 'zabbix'
+> the default user is “Admin” and the password is “zabbix”
