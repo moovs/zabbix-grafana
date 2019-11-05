@@ -47,7 +47,7 @@ chmod +x telegram
   <img width="300" height="400" src="https://github.com/moovs/zabbix-grafana/blob/master/src/zabbix-web.png">
 </p>
 
-#### Change admin password
+#### Change admin password:
 
 - navigate to `Administration` then `Users` select `Admin` and click `Change password`
 
@@ -69,11 +69,16 @@ apt-get install zabbix-agent
 #### Update Zabbix agent config:
 - after that you need to change point `Server=` in `/etc/zabbix/zabbix_agentd.conf` config to IP address your zabbix-server container `Server=172.16.238.10` and restart zabbix-agent `/etc/init.d/zabbix-agent restart`
  
-#### Change Zabbix server IP address 
+#### Change Zabbix server IP address:
 - and the last step, go to `Configuration` then `Hosts` click on `Zabbix server` and  change IP address to IP address your host: 
 
 <p align="center">
   <img width="800" height="600" src="https://github.com/moovs/zabbix-grafana/blob/master/src/zabbix-host.png">
 </p>
 
-- after waiting a few minutes go to `Moniroting` then `Graphs` set your Group, Host and see 
+#### Check monitoring data:
+- after few minutes, monitoring data will start flowing in, to check host graphs go to `Moniroting` then `Graphs`:
+
+<p align="center">
+  <img width="900" height="500" src="https://github.com/moovs/zabbix-grafana/blob/master/src/zabbix-dash.png">
+</p>
