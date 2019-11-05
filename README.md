@@ -51,7 +51,7 @@ chmod +x telegram
 
 - navigate to `Administration` then `Users` select `Admin` and click `Change password`
 
-#### if you want to monitor your instance with Zabbix, you need to install zabbix-agent on this host:
+#### If you want to monitor your instance with Zabbix, you need to install zabbix-agent on this host:
 > in this case, we install Zabbix agent of the 4.0 version:
 ```
 wget https://repo.zabbix.com/zabbix/4.0/debian/pool/main/z/zabbix-release/zabbix-release_4.0-2+stretch_all.deb
@@ -66,12 +66,12 @@ apt-get update
 apt-get install zabbix-agent
 ```
 
-- after that you need to change point `Server=` in `/etc/zabbix/zabbix_agentd.conf` config to IP address your zabbix-server container `Server=172.16.238.10` and restart zabbix-agent `/etc/init.d/zabbix-agent restart`
+#### After that you need to change point `Server=` in `/etc/zabbix/zabbix_agentd.conf` config to IP address your zabbix-server container `Server=172.16.238.10` and restart zabbix-agent `/etc/init.d/zabbix-agent restart`
  
-- and the last step, go to `Configuration` then `Hosts` click on `Zabbix server` and  change IP address to IP address your host: 
+#### And the last step, go to `Configuration` then `Hosts` click on `Zabbix server` and  change IP address to IP address your host: 
 
 <p align="center">
   <img width="800" height="600" src="https://github.com/moovs/zabbix-grafana/blob/master/src/zabbix-host.png">
 </p>
 
- - after waiting a few minutes go to `Moniroting` then `Graphs` set your Group, Host and see 
+#### After waiting a few minutes go to `Moniroting` then `Graphs` set your Group, Host and see 
