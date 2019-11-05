@@ -95,8 +95,15 @@ apt-get install zabbix-agent
 #### Enable Zabbix plugin:
 - go to `Zabbix` in `Installed Apps` and enable Zabbix plugin or just click `Enable now`:
 
-#### Configure the data source as follows:
-
 <p align="center">
   <img width="900" height="400" src="https://github.com/moovs/zabbix-grafana/blob/master/src/grafana-app.png">
+</p>
+
+#### Configure the data source as follows:
+- enter a name for this new data source in the `Name` field.
+- fill in the `Url` field with the full path to the Zabbix API, which will be http://your_zabbix_server_ip_address/api_jsonrpc.php.
+- fill in the `Username` and `Password` fields in `Zabbix API details` block with the `username` and `password` for Zabbix.
+
+<p align="center">
+  <img width="600" height="700" src="https://github.com/moovs/zabbix-grafana/blob/master/src/data-src.png">
 </p>
