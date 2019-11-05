@@ -103,8 +103,13 @@ apt-get install zabbix-agent
 - enter a name for this new data source in the `Name` field.
 - fill in the `Url` field with the full path to the Zabbix API, which will be http://your_zabbix_server_ip_address/api_jsonrpc.php.
 - fill in the `Username` and `Password` fields in `Zabbix API details` block with the `username` and `password` for Zabbix.
-- click `Save & Test`
+
 <p align="center">
   <img width="600" height="700" src="https://github.com/moovs/zabbix-grafana/blob/master/src/data-src.png">
 </p>
 
+- click `Save & Test` to save and test your configuration. If you did everything correctly you will see the following message:
+
+<p align="center">
+  <img width="600" height="150" src="https://github.com/moovs/zabbix-grafana/blob/master/src/zabbix-api.png">
+</p>
