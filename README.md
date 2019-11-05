@@ -38,8 +38,8 @@ chown -R zabbix telegram
 ```
 chmod +x telegram
 ```
-## Step 1: Zabbix setup
-#### login to Zabbix web interface with default 80 port:
+## Step 1. Zabbix setup.
+#### Login to Zabbix web interface with default 80 port:
 
 > the default user is “admin” and the password is “zabbix”
 
@@ -82,3 +82,15 @@ apt-get install zabbix-agent
 <p align="center">
   <img width="900" height="500" src="https://github.com/moovs/zabbix-grafana/blob/master/src/zabbix-dash.png">
 </p>
+
+## Step 2. Grafana setup.
+#### Login to Grafana:
+- login to Grafana web interface with default 3000 port login with default credentials and change admin password:
+> default login and password is `admin`
+
+<p align="center">
+  <img width="800" height="550" src="https://github.com/moovs/zabbix-grafana/blob/master/src/grafana-web.png">
+</p>
+
+#### Enable Zabbix plugin:
+- go to `Zabbix` in `Installed Apps` and enable Zabbix plugin:
