@@ -13,22 +13,22 @@ This guide is about how to deploy a Zabbix monitoring system with Grafana to dis
 The whole installation will be divided into 3 parts. The first step is setting up Zabbix, the second step is connecting Zabbix to Grafana, and the third step is creating Telegram bot and connect to Zabbix for notifications.
 <br>
 ## Prerequisites:
-- clone this repo to your host:
+#### Clone this repo to your host:
 ```
 git clone https://github.com/moovs/zabbix-grafana.git
 ```
-- build and start docker-compose file:
+#### Build and start docker-compose file:
 ```
 cd /path/to/zabbix-grafana
 ```
 ```
 docker-compose up -d --build
 ```
-- move telegram script to alertscripts:
+#### Move telegram script to alertscripts:
 ```
 mv telegram alertscripts/
 ```
-- set right permission to telegram script and make it executable:
+#### Set right permission to telegram script and make it executable:
 ```
 cd alertscripts/
 ```
