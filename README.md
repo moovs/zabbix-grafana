@@ -66,9 +66,9 @@ apt-get update
 apt-get install zabbix-agent
 ```
 
-- after that you need to change point `Server=` in `/etc/zabbix/zabbix_agentd.conf` config to IP address your zabbix-server container `Server=172.16.238.10` and restart zabbix-agent `/etc/init.d/zabbix-agent restart`
+After that you need to change point `Server=` in `/etc/zabbix/zabbix_agentd.conf` config to IP address your zabbix-server container `Server=172.16.238.10` and restart zabbix-agent `/etc/init.d/zabbix-agent restart`
  
-- and the last step, go to `Configuration` then `Hosts` click on `Zabbix server` and  change IP address to IP address your host: 
+#### And the last step, go to `Configuration` then `Hosts` click on `Zabbix server` and  change IP address to IP address your host: 
 
 <p align="center">
   <img width="800" height="600" src="https://github.com/moovs/zabbix-grafana/blob/master/src/zabbix-host.png">
