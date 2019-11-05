@@ -113,3 +113,23 @@ apt-get install zabbix-agent
 <p align="center">
   <img width="600" height="150" src="https://github.com/moovs/zabbix-grafana/blob/master/src/zabbix-api.png">
 </p>
+
+- here you may import some dashboards for vizualizations, just click to `Dashboards` and import `Zabbix Server Dashboard` and `Zabbix Template Linux Server`:
+
+<p align="center">
+  <img width="700" height="200" src="https://github.com/moovs/zabbix-grafana/blob/master/src/grafana-dash.png">
+</p>
+
+- to see them go to `Home`:
+
+<p align="center">
+  <img width="700" height="250" src="https://github.com/moovs/zabbix-grafana/blob/master/src/home-dash.png">
+</p>
+
+- and select your dashboards to see graphs:
+
+<p align="center">
+  <img width="900" height="500" src="https://github.com/moovs/zabbix-grafana/blob/master/src/dashboard.png">
+</p>
+
+####
