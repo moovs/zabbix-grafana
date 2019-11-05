@@ -39,7 +39,7 @@ chown -R zabbix telegram
 chmod +x telegram
 ```
 ## Step 1: Zabbix setup
-- login to Zabbix web interface with default 80 port:
+#### login to Zabbix web interface with default 80 port:
 
 > the default user is “admin” and the password is “zabbix”
 
@@ -47,8 +47,12 @@ chmod +x telegram
   <img width="300" height="400" src="https://github.com/moovs/zabbix-grafana/blob/master/src/zabbix-web.png">
 </p>
 
-- if you want to monitor your instance with Zabbix, you need to install zabbix-agent on this host:
->> in this case, we install Zabbix agent of the 4.0 version:
+#### Change admin password
+
+- navigate to `Administration` then `Users` select `Admin` and click `Change password`
+
+#### if you want to monitor your instance with Zabbix, you need to install zabbix-agent on this host:
+> in this case, we install Zabbix agent of the 4.0 version:
 ```
 wget https://repo.zabbix.com/zabbix/4.0/debian/pool/main/z/zabbix-release/zabbix-release_4.0-2+stretch_all.deb
 ```
@@ -67,5 +71,7 @@ apt-get install zabbix-agent
 - and the last step, go to `Configuration` then `Hosts` click on `Zabbix server` and  change IP address to IP address your host: 
 
 <p align="center">
-  <img width="700" height="500" src="https://github.com/moovs/zabbix-grafana/blob/master/src/zabbix-host.png">
+  <img width="800" height="600" src="https://github.com/moovs/zabbix-grafana/blob/master/src/zabbix-host.png">
 </p>
+
+ - after waiting a few minutes go to `Moniroting` then `Graphs` set your Group, Host and see 
