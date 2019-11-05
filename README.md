@@ -93,4 +93,10 @@ apt-get install zabbix-agent
 </p>
 
 #### Enable Zabbix plugin:
-- go to `Zabbix` in `Installed Apps` and enable Zabbix plugin:
+- go to `Zabbix` in `Installed Apps` and enable Zabbix plugin or just click `Enable now`:
+
+#### Configure the data source as follows:
+
+<p align="center">
+  <img width="900" height="400" src="https://github.com/moovs/zabbix-grafana/blob/master/src/grafana-app.png">
+</p>
