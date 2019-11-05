@@ -41,4 +41,31 @@ chmod +x telegram
 ## Step 1: Zabbix setup
 - login to Zabbix web interface with default 80 port:
 
-> the default user is “Admin” and the password is “zabbix”
+> the default user is “admin” and the password is “zabbix”
+
+<p align="center">
+  <img width="300" height="400" src="https://github.com/moovs/zabbix-grafana/blob/master/src/zabbix-web.png">
+</p>
+
+- if you want to monitor your instance with Zabbix, you need to install zabbix-agent on this host:
+>> in this case, we install Zabbix agent of the 4.0 version:
+```
+wget https://repo.zabbix.com/zabbix/4.0/debian/pool/main/z/zabbix-release/zabbix-release_4.0-2+stretch_all.deb
+```
+```
+dpkg -i zabbix-release_4.0-2+stretch_all.deb
+```
+```
+apt-get update
+```
+```
+apt-get install zabbix-agent
+```
+
+- after that you need to change point `Server=` in `/etc/zabbix/zabbix_agentd.conf` config to IP address your zabbix-server container `Server=172.16.238.10` and restart zabbix-agent `/etc/init.d/zabbix-agent restart`
+ 
+- and the last step, go to `Configuration` then `Hosts` click on `Zabbix server` and  change IP address to IP address your host: 
+
+<p align="center">
+  <img width="700" height="500" src="https://github.com/moovs/zabbix-grafana/blob/master/src/zabbix-host.png">
+</p>
