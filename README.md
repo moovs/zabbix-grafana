@@ -194,3 +194,14 @@ cd /usr/lib/zabbix/alertscripts/
 <p align="center">
   <img width="900" height="200" src="https://github.com/moovs/zabbix-grafana/blob/master/src/enable.png">
 </p>
+
+- now you can test you alerting system, go to instance with Zabbix server and stop your zabbix_agent:
+
+```
+service zabbix-agent stop
+```
+> and after waiting a few minutes you revieved alert massage to your group in Telegram:
+
+<p align="center">
+  <img width="500" height="200" src="https://github.com/moovs/zabbix-grafana/blob/master/src/alert.png">
+</p>
