@@ -203,5 +203,5 @@ service zabbix-agent stop
 > and after waiting a few minutes you revieved alert massage to your group in Telegram:
 
 <p align="center">
-  <img width="500" height="200" src="https://github.com/moovs/zabbix-grafana/blob/master/src/alert.png">
+  <img width="500" height="150" src="https://github.com/moovs/zabbix-grafana/blob/master/src/alert.png">
 </p>
