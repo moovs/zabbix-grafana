@@ -132,4 +132,34 @@ apt-get install zabbix-agent
   <img width="900" height="500" src="https://github.com/moovs/zabbix-grafana/blob/master/src/dashboard.png">
 </p>
 
-####
+> [here you find more dasboards to Zabbix](https://grafana.com/grafana/dashboards?category=zabbix)
+
+#### Step 3. Сonnecting and setting up a Telegram to Zabbix.
+
+If you want send alert notifications to Telegram channel you need create Telegram bot.
+
+- firstly go to `BotFather` in your Telegram.
+- in `BotFather` type `/start` see informations about what you can do or just type `/newbot` for create your bot.
+- the next you will be asked to give a name and username to your bot.
+>  it must end in `bot`. Like this, for example: TetrisBot or tetris_bot.
+- after that you received your bot token to access the HTTP API, copy this token in you `Telegram` script in line `BOT_TOKEN`
+
+<p align="center">
+  <img width="700" height="400" src="https://github.com/moovs/zabbix-grafana/blob/master/src/telegram-bot.png">
+</p>
+
+- get the list of updates for your BOT for that follow this link and substitute your `bot token` `https://api.telegram.org/bot<YourBOTToken>/getUpdates`
+- login to the Telegram web in your browser and find your bot by username and click on `Start` button.
+- create your new group and add here your bot.
+- now refresh this link to see you `group chat id`
+> your group chat id will be start with minus sign like this `-635324858`
+- after that you can send test notification in your chat group:
+```
+docker exec -ti zabbix_server bash
+```
+```
+cd /usr/lib/zabbix/alertscripts/
+```
+```
+./telegram -305485853 test mesage
+```
