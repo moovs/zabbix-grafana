@@ -153,7 +153,7 @@ If you want send alert notifications to Telegram channel you need create Telegra
 - get the list of updates for your BOT for that follow this link and substitute your `bot token` `https://api.telegram.org/bot<YourBOTToken>/getUpdates`
 - login to the Telegram web in your browser and find your bot by username and click on `Start` button.
 - create your new group and add here your bot.
-- now refresh this link to see you `group chat id`
+- now refresh this link to see you `group chat id`.
 > your group chat id will be start with minus sign like this `-635324858`
 - after that you can send test notification in your chat group:
 ```
@@ -163,16 +163,34 @@ docker exec -ti zabbix_server bash
 cd /usr/lib/zabbix/alertscripts/
 ```
 ```
-./telegram -305485853 test mesage
+./telegram -635324858 test mesage
 ```
 > if you received test message you can move on.
 
 #### Create Media type in Zabbix.
-- after everything done you need go to Zabbix web interface to `Administration` > `Media types` and choose `Create media type` 
+- after everything done you need go to Zabbix web interface to `Administration` > `Media types` and choose `Create media type`: 
 
 <p align="center">
   <img width="700" height="400" src="https://github.com/moovs/zabbix-grafana/blob/master/src/media-type.png">
 </p>
 
-- enter a name for media type in the `Name` and `Script name` fields and choose `Script` in `Type` fields
-- fill in `Script parameters` fields next parameters: `{ALERT.SENDTO}`, `{ALERT.SUBJECT}` and `{ALERT.MESSAGE}`
+- enter a name for media type in the `Name` and `Script name` fields and choose `Script` in `Type` fields.
+- fill in `Script parameters` fields next parameters: `{ALERT.SENDTO}`, `{ALERT.SUBJECT}` and `{ALERT.MESSAGE}`.
+- then go to `User profile: Zabbix Administrator`, click on `human icon` in the right corner and choose `Media` tab:
+
+<p align="center">
+  <img width="700" height="400" src="https://github.com/moovs/zabbix-grafana/blob/master/src/media.png">
+</p>
+
+- choose `Type` telegram in the field `Send to` substitute your group chat id `-635324858`and click `add` then `Update`.
+- the next go to `Configuration` then `Actions` and choose `Host`, `equals` and name of your server `Zabbix server` and click `Add` button then `Update`:
+
+<p align="center">
+  <img width="700" height="400" src="https://github.com/moovs/zabbix-grafana/blob/master/src/action.png">
+</p>
+
+- don't forget `Enable` it on `Actions` page:
+
+<p align="center">
+  <img width="900" height="200" src="https://github.com/moovs/zabbix-grafana/blob/master/src/enable.png">
+</p>
