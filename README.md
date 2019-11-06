@@ -132,7 +132,7 @@ apt-get install zabbix-agent
   <img width="900" height="500" src="https://github.com/moovs/zabbix-grafana/blob/master/src/dashboard.png">
 </p>
 
-> [here you find more dasboards to Zabbix](https://grafana.com/grafana/dashboards?category=zabbix)
+> [here you find more dasboards for Zabbix](https://grafana.com/grafana/dashboards?category=zabbix)
 
 ## Step 3. Сonnecting and setting up a Telegram to Zabbix.
 
