@@ -134,9 +134,11 @@ apt-get install zabbix-agent
 
 > [here you find more dasboards to Zabbix](https://grafana.com/grafana/dashboards?category=zabbix)
 
-#### Step 3. Сonnecting and setting up a Telegram to Zabbix.
+## Step 3. Сonnecting and setting up a Telegram to Zabbix.
 
 If you want send alert notifications to Telegram channel you need create Telegram bot.
+
+#### Create Telegram Bot.
 
 - firstly go to `BotFather` in your Telegram.
 - in `BotFather` type `/start` see informations about what you can do or just type `/newbot` for create your bot.
@@ -163,3 +165,14 @@ cd /usr/lib/zabbix/alertscripts/
 ```
 ./telegram -305485853 test mesage
 ```
+> if you received test message you can move on.
+
+#### Create Media type in Zabbix.
+- after everything done you need go to Zabbix web interface to `Administration` > `Media types` and choose `Create media type` 
+
+<p align="center">
+  <img width="700" height="400" src="https://github.com/moovs/zabbix-grafana/blob/master/src/media-type.png">
+</p>
+
+- enter a name for media type in the `Name` and `Script name` fields and choose `Script` in `Type` fields
+- fill in `Script parameters` fields next parameters: `{ALERT.SENDTO}`, `{ALERT.SUBJECT}` and `{ALERT.MESSAGE}`
